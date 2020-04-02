@@ -9,27 +9,23 @@ function Employee(props) {
                 <thead className="thead-light">
                     <tr>
                         <th scope="col">Image</th>
-                        <th scope="col">Name</th>
+                        <th scope="col" onClick={props.sortByName} style={{ cursor: 'pointer'}}><strong>N</strong>ame</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">DOB</th>
+                        <th scope="col"  onClick={props.sortByDOB} style={{ cursor: 'pointer'}}><strong>D</strong>OB</th>
                     </tr>
                 </thead>
                 <tbody>
                 {props.results.map(result => (
                     <tr className="table" key={result.login.uuid}>
-                     
-
                         <td> <img className="
                         "src={result.picture.medium} alt="" /></td>
                         <td>{result.name.first + " " + result.name.last}  </td>
                         <td className="email"><a href={result.email}>{result.email}</a></td>
                         <td>{result.cell}</td>
                         <td><Moment format="MM-DD-YYYY">{result.dob.date}</Moment></td>
-
                     </tr>
                 ))}
-
                 </tbody>
             </table>
         </div>

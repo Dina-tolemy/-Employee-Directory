@@ -10,9 +10,10 @@ function Search(props) {
           type="search"
           value={props.value}
           name="search"
-          placeholder="Serch By name"
+          placeholder="Serch By First Or Last name"
           aria-label="Search"
           onChange={props.handleInputChange}
+          style={{width:250}}
        />
         <button
          type="button"
