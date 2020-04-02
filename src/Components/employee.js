@@ -5,8 +5,8 @@ function Employee(props) {
 
     return (
         <div>
-            <table class="table">
-                <thead class="thead-light">
+            <table className="table">
+                <thead className="thead-light">
                     <tr>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
