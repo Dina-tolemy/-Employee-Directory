@@ -19,6 +19,9 @@ class App extends React.Component {
     this.setState({
       [name]: value
     });
+    if(!value){
+      this.searchEmployee()
+    }
    // this.searchEmployee(value);
   };
     searchEmployee = () => {
