@@ -4,7 +4,7 @@ function Search(props) {
 
   return (
     <nav className="navbar navbar-light bg-light">
-      <form className="form-inline " style={{marginBottom:20}}>
+      <form className="form-inline " style={{ marginBottom: 20 }}>
         <input
           className="form-control mr-sm-2"
           type="search"
@@ -13,13 +13,13 @@ function Search(props) {
           placeholder="Serch By First Or Last name"
           aria-label="Search"
           onChange={props.handleInputChange}
-          style={{width:250}}
-       />
+          style={{ width: 250 }}
+        />
         <button
-         type="button"
+          type="button"
           className="btn btn-outline-primary"
-          onClick={props.handleFormSubmit} 
-          >Search</button>
+          onClick={props.handleFormSubmit}
+        >Search</button>
       </form>
     </nav>
   );

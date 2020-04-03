@@ -36,7 +36,7 @@ class App extends React.Component {
     event.preventDefault();
     const { employees, search } = this.state;
     const filteredEmployees = employees.filter(employee =>
-       employee.name.first.toLowerCase() === (search.toLowerCase())|| employee.name.last.toLowerCase() === (search.toLowerCase() ));
+      employee.name.first.toLowerCase() === (search.toLowerCase()) || employee.name.last.toLowerCase() === (search.toLowerCase()));
 
     this.setState({
       filteredEmployees
@@ -46,14 +46,12 @@ class App extends React.Component {
     const filteredEmp = this.state.filteredEmployees;
     if (this.state.orderByName === "asc") {
       const SortedEmployees = filteredEmp.sort((a, b) => (a.name.first > b.name.first) ? 1 : -1)
-      console.log(SortedEmployees)
       this.setState({
         filteredEmployees: SortedEmployees,
         orderByName: "desc"
       })
     } else {
       const SortedEmployees = filteredEmp.sort((a, b) => (a.name.first > b.name.first) ? -1 : 1)
-      console.log(SortedEmployees)
       this.setState({
         filteredEmployees: SortedEmployees,
         orderByName: "asc"
