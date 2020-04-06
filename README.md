@@ -20,4 +20,5 @@ Employees arranged alphabetically example:
 ![alpha](https://user-images.githubusercontent.com/55872249/78516232-369dda00-77fc-11ea-959d-7d938d41b188.png)
 
 
+Note: npm start to run in the developmnet.
 Deployed link: https://emplyee-directory173.herokuapp.com/
