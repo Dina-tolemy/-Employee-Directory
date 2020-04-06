@@ -7,15 +7,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 if (process.env.NODE_ENV === "production") {
    app.use(express.static("build"));
- }
+}
+
 app.get('*', (req, res) => {
-   res.sendFile(path.join(__dirname, 'build/index.html'), (err) => {
+   res.sendFile(path.resolve(__dirname, 'build', 'index.html'), (err) => {
       console.log(err);
    });
 });
 
+
+
 app.listen(port, () => {
-    console.log(`Server is up on port ${port}!`);
- });
+   console.log(`Server is up on port ${port}!`);
+});
 
 
